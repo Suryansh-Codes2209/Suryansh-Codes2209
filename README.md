@@ -1,6 +1,6 @@
 ### Hi there 👋, I am Suryansh Chaudhary
 #### that's my GitHub account
-![that's my GitHub account](https://arturssmirnovs.github.io/github-profile-readme-generator/images/banner.png)
+![that's my GitHub account](https://github.com/Suryansh-Codes2209/Suryansh-Codes2209/blob/8e581dad7c76bc992d5ceaf2ae30a803cae6c5d6/Suryansh%20Chaudhary.jpg)
 
 
 Skills: HTML / CSS / Bootstrap / JavaScript / Python / Django
