@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 230" width="1000" height="230" role="img" aria-label="Suryansh Chaudhary — Full-Stack AI Engineer">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a84ff"/>
+      <stop offset="55%" stop-color="#5e5ce6"/>
+      <stop offset="100%" stop-color="#34c759"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a84ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0a84ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="230" rx="14" fill="#0d1117"/>
+  <rect width="1000" height="230" rx="14" fill="none" stroke="#21262d" stroke-width="1"/>
+
+  <!-- chunk-parallelism motif: eight lanes filling at different rates -->
+  <g transform="translate(640,44)" opacity="0.85">
+    <g fill="#161b22">
+      <rect x="0" y="0"   width="300" height="10" rx="5"/>
+      <rect x="0" y="18"  width="300" height="10" rx="5"/>
+      <rect x="0" y="36"  width="300" height="10" rx="5"/>
+      <rect x="0" y="54"  width="300" height="10" rx="5"/>
+      <rect x="0" y="72"  width="300" height="10" rx="5"/>
+      <rect x="0" y="90"  width="300" height="10" rx="5"/>
+      <rect x="0" y="108" width="300" height="10" rx="5"/>
+      <rect x="0" y="126" width="300" height="10" rx="5"/>
+    </g>
+    <g fill="url(#accent)">
+      <rect x="0" y="0"   width="264" height="10" rx="5"/>
+      <rect x="0" y="18"  width="192" height="10" rx="5"/>
+      <rect x="0" y="36"  width="288" height="10" rx="5"/>
+      <rect x="0" y="54"  width="150" height="10" rx="5"/>
+      <rect x="0" y="72"  width="228" height="10" rx="5"/>
+      <rect x="0" y="90"  width="276" height="10" rx="5"/>
+      <rect x="0" y="108" width="120" height="10" rx="5"/>
+      <rect x="0" y="126" width="210" height="10" rx="5"/>
+    </g>
+  </g>
+
+  <text x="56" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#e6edf3" letter-spacing="-0.5">Suryansh Chaudhary</text>
+
+  <rect x="56" y="100" width="120" height="3" rx="1.5" fill="url(#fade)"/>
+
+  <text x="56" y="136" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#7d8590">Full-Stack AI Engineer · Bangalore, India</text>
+
+  <text x="56" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="17" fill="#adbac7">I ship LangGraph agents to production and open-source macOS tools.</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5">
+    <rect x="56"  y="188" width="112" height="24" rx="12" fill="#0a84ff" fill-opacity="0.14" stroke="#0a84ff" stroke-opacity="0.35"/>
+    <text x="112" y="204" fill="#58a6ff" text-anchor="middle">LangGraph</text>
+
+    <rect x="178" y="188" width="84" height="24" rx="12" fill="#5e5ce6" fill-opacity="0.14" stroke="#5e5ce6" stroke-opacity="0.35"/>
+    <text x="220" y="204" fill="#a5a2ff" text-anchor="middle">Python</text>
+
+    <rect x="272" y="188" width="76" height="24" rx="12" fill="#f0883e" fill-opacity="0.14" stroke="#f0883e" stroke-opacity="0.35"/>
+    <text x="310" y="204" fill="#f0a868" text-anchor="middle">Swift</text>
+
+    <rect x="358" y="188" width="112" height="24" rx="12" fill="#34c759" fill-opacity="0.14" stroke="#34c759" stroke-opacity="0.35"/>
+    <text x="414" y="204" fill="#56d364" text-anchor="middle">TypeScript</text>
+  </g>
+</svg>

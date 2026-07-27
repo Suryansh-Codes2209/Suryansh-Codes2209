@@ -1,69 +1,132 @@
-<h1 align="center">Suryansh Chaudhary</h1>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
+  <img alt="Suryansh Chaudhary — Full-Stack AI Engineer, Bangalore. I ship LangGraph agents to production and open-source macOS tools." src="./assets/hero-dark.svg">
+</picture>
 
 <p align="center">
-  I build AI agents that reach production, and open-source macOS tools.<br>
-  Full-Stack AI Engineer at <b>Spiral Kite Labs</b> — LangGraph agents that read filings and write analyst-grade reports.<br>
-  Creator of <a href="https://github.com/Suryansh-Codes2209/Macget"><b>MacGet</b></a>, a native macOS download manager.
-</p>
-
-<p align="center">
-  <a href="https://suryansh.work">Site</a> ·
-  <a href="https://suryansh.work/blog">Build logs</a> ·
-  <a href="https://x.com/Suryansh_2001">X</a> ·
-  <a href="https://www.linkedin.com/in/suryansh-chaudhary-2209/">LinkedIn</a> ·
-  <a href="https://suryansh.work/suryansh.pdf">Résumé</a>
+  <a href="https://suryansh.work"><b>Site</b></a> ·
+  <a href="https://suryansh.work/blog"><b>Build logs</b></a> ·
+  <a href="https://x.com/Suryansh_2001"><b>X</b></a> ·
+  <a href="https://www.linkedin.com/in/suryansh-chaudhary-2209/"><b>LinkedIn</b></a> ·
+  <a href="https://suryansh.work/suryansh.pdf"><b>Résumé</b></a>
 </p>
 
 ---
 
-### 🛠 What I'm shipping right now
+## Now
 
-- **MacGet 1.2** — YouTube & HLS downloads, browser-capture, signed auto-updates. SwiftUI + an actor-based concurrency engine.
-- **A multi-agent financial research desk** — LangGraph control plane over Vertex AI multimodal RAG, live market data, grounded reasoning.
-- **Build logs, weekly** — how the download engine and the agents actually get built, including what broke.
-
----
-
-### 📦 MacGet — native macOS download manager
-
-[![Release](https://img.shields.io/github/v/release/Suryansh-Codes2209/Macget?label=release&color=0a84ff)](https://github.com/Suryansh-Codes2209/Macget/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/Suryansh-Codes2209/Macget/total?label=downloads&color=34c759)](https://github.com/Suryansh-Codes2209/Macget/releases)
-[![License](https://img.shields.io/github/license/Suryansh-Codes2209/Macget?color=8e8e93)](https://github.com/Suryansh-Codes2209/Macget/blob/main/LICENSE)
-
-Chunked HTTP parallelism that adapts per host, anti-leech CDN detection, browser-extension capture over Native Messaging, and bundled `yt-dlp` for video. Free, open source, macOS 26+.
-
-**[Download the .dmg →](https://github.com/Suryansh-Codes2209/Macget/releases/latest/download/Macget.dmg)**
+- **MacGet 1.2** — YouTube & HLS downloads, browser-capture, signed auto-updates.
+- **A multi-agent financial research desk** — LangGraph control plane, Vertex AI multimodal RAG data plane.
+- **A build log every week** — the engineering, the trade-offs, and what broke.
 
 ---
 
-### 🧰 Stack
+## MacGet — native macOS download manager
 
-| Area | What I use daily |
+<table>
+<tr>
+<td width="58%" valign="top">
+
+<a href="https://github.com/Suryansh-Codes2209/Macget"><img src="https://img.shields.io/github/v/release/Suryansh-Codes2209/Macget?label=release&color=0a84ff&labelColor=161b22&style=flat-square" alt="Latest release"></a>
+<a href="https://github.com/Suryansh-Codes2209/Macget/releases"><img src="https://img.shields.io/github/downloads/Suryansh-Codes2209/Macget/total?label=downloads&color=34c759&labelColor=161b22&style=flat-square" alt="Total downloads"></a>
+<a href="https://github.com/Suryansh-Codes2209/Macget/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Suryansh-Codes2209/Macget?color=8e8e93&labelColor=161b22&style=flat-square" alt="License"></a>
+
+<br>
+
+Chunked HTTP parallelism that <b>adapts per host</b>, anti-leech CDN detection,
+browser-extension capture over Native Messaging, and bundled <code>yt-dlp</code> for video.
+Built in Swift on an actor-based concurrency engine — no polling, no shared mutable state.
+
+<br>
+
+<b>Free · Open source · macOS 26+</b>
+
+</td>
+<td width="42%" valign="top">
+
+<img src="./assets/macget-demo.gif" alt="MacGet downloading a file with eight parallel chunks" width="100%">
+
+</td>
+</tr>
+</table>
+
+> [!TIP]
+> **[Download MacGet →](https://github.com/Suryansh-Codes2209/Macget/releases/latest/download/Macget.dmg)** — or read [how the download engine works](https://suryansh.work/blog/building-macget-download-engine).
+
+---
+
+## How I build agents
+
+The shape I reach for on every production agent — explicit state, small nodes, a hard grounding gate before anything reaches a user.
+
+```mermaid
+flowchart LR
+    Q([Analyst question]) --> R{Router}
+    R -->|filings| RAG[Vertex multimodal RAG]
+    R -->|prices| MKT[Market data tools]
+    RAG --> S[Synthesis node]
+    MKT --> S
+    S --> G{Grounding gate}
+    G -->|fail| RAG
+    G -->|pass| OUT([Analyst-grade report])
+
+    style Q fill:#0a84ff22,stroke:#0a84ff
+    style OUT fill:#34c75922,stroke:#34c759
+    style G fill:#f0883e22,stroke:#f0883e
+```
+
+Written up in full: [architecting a financial AI analyst](https://suryansh.work/blog/how-we-architect-a-financial-ai-analyst-multi-agent) · [hard gates and soft gates](https://suryansh.work/blog/langgraph-prompt-injection-hard-soft-gates)
+
+---
+
+## Stack
+
+**Daily:** `LangGraph` `LangChain` `Python` `FastAPI` `TypeScript` `React` `Swift` `Google Cloud Run`
+
+<details>
+<summary>Everything else I work in</summary>
+
+<br>
+
+| Area | Tools |
 |---|---|
 | **AI / Agents** | LangGraph · LangChain · Vertex AI RAG · Gemini & Claude APIs · eval + guardrail design |
-| **Backend** | Python · FastAPI · PostgreSQL · Redis |
-| **Frontend** | TypeScript · React · Next.js · Tailwind |
+| **Backend** | Python · FastAPI · Django · Node.js · PostgreSQL · Redis · MongoDB |
+| **Frontend** | TypeScript · React · Next.js · Tailwind · Framer Motion |
 | **Native** | Swift · SwiftUI · structured concurrency / actors |
-| **Infra** | Google Cloud Run · Docker · GitHub Actions |
+| **Infra** | Google Cloud Run · Docker · GitHub Actions · CI/CD |
+
+</details>
 
 ---
 
-### ✍️ Latest build logs
+## Latest build logs
 
-<!-- BLOG-POST-LIST:START -->- [Automating blog cover art with Gemini 3 Pro Image: my &#39;no legible text&#39; rule was the bug](https://suryansh.work/blog/automating-blog-cover-art-gemini-3-pro-image) — <sub>Jul 26, 2026</sub><br>- [Claude Opus 5 vs Fable 5: how I&#39;m routing nodes in a LangGraph agent](https://suryansh.work/blog/claude-opus-5-vs-fable-5-routing-langgraph-agents) — <sub>Jul 26, 2026</sub><br>- [Run a build-log blog on your portfolio for $0: Next.js, Supabase, Redis, and Resend on free tiers](https://suryansh.work/blog/free-build-log-blog-nextjs-portfolio) — <sub>Jul 22, 2026</sub><br>- [How we&#39;re architecting a financial AI analyst: a multi-agent research desk on LangGraph](https://suryansh.work/blog/how-we-architect-a-financial-ai-analyst-multi-agent) — <sub>Jul 16, 2026</sub><br><!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
-→ [All posts at suryansh.work/blog](https://suryansh.work/blog)
+<sub><a href="https://suryansh.work/blog">All posts →</a></sub>
 
 ---
 
-<img align="right" width="45%" src="https://github-readme-stats.vercel.app/api?username=Suryansh-Codes2209&show_icons=true&hide_border=true&hide_title=true&theme=transparent&hide=issues" alt="GitHub stats" />
+## Activity
 
-### 🤝 Open to
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/2-most-commit-language.svg">
+  <img src="./profile-summary-card-output/vue/2-most-commit-language.svg" alt="Most-used languages" width="49%">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/3-stats.svg">
+  <img src="./profile-summary-card-output/vue/3-stats.svg" alt="GitHub stats" width="49%">
+</picture>
+
+---
+
+## Open to
 
 - Collaborations on agent infrastructure and developer tooling
-- Bug reports, feature ideas, and PRs on MacGet
+- Bug reports, feature ideas, and PRs on [MacGet](https://github.com/Suryansh-Codes2209/Macget)
 - Talking shop about LangGraph, RAG evals, or Swift concurrency
 
-📮 **suryansh.codes2001@gmail.com**
-
-<br clear="right" />
+**suryansh.codes2001@gmail.com**
