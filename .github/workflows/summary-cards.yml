@@ -1,0 +1,40 @@
+# .github/workflows/summary-cards.yml
+#
+# Generates your stat cards as SVG files and COMMITS them into this repo,
+# under ./profile-summary-card-output/. The README then points at your own
+# files instead of a third-party Vercel app — so they can never 404, go
+# stale, or get rate-limited.
+#
+# ONE-TIME SETUP:
+#   1. github.com/settings/tokens -> Generate new token (classic)
+#      Scopes: read:user  and  repo
+#   2. In THIS repo: Settings -> Secrets and variables -> Actions
+#      -> New repository secret
+#      Name: SUMMARY_GITHUB_TOKEN     Value: <the token>
+#   3. Settings -> Actions -> General -> Workflow permissions
+#      -> Read and write permissions
+
+name: Profile summary cards
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # daily, 30 min after the blog sync
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: main
+          UTC_OFFSET: 5.5          # IST, so "productive time" is accurate
+          AUTO_PUSH: true
