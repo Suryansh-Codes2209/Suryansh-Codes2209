@@ -1,0 +1,29 @@
+# Path in your profile repo: .github/workflows/blog-post-workflow.yml
+# Pulls the latest posts from suryansh.work/rss.xml into the README
+# between the <!-- BLOG-POST-LIST:START --> / <!-- BLOG-POST-LIST:END --> markers.
+
+name: Latest blog posts
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # daily, 01:00 UTC (06:30 IST)
+  workflow_dispatch:       # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write          # needed to commit the updated README
+
+jobs:
+  update-readme:
+    name: Sync build logs into README
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pull posts from suryansh.work
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://suryansh.work/rss.xml"
+          max_post_count: 4
+          template: "- [$title]($url) — <sub>$date</sub><br>"
+          date_format: "mmm d, yyyy"
+          commit_message: "chore: sync latest build logs"
