@@ -50,8 +50,7 @@ Chunked HTTP parallelism that adapts per host, anti-leech CDN detection, browser
 
 ### ✍️ Latest build logs
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [Automating blog cover art with Gemini 3 Pro Image: my &#39;no legible text&#39; rule was the bug](https://suryansh.work/blog/automating-blog-cover-art-gemini-3-pro-image) — <sub>Jul 26, 2026</sub><br>- [Claude Opus 5 vs Fable 5: how I&#39;m routing nodes in a LangGraph agent](https://suryansh.work/blog/claude-opus-5-vs-fable-5-routing-langgraph-agents) — <sub>Jul 26, 2026</sub><br>- [Run a build-log blog on your portfolio for $0: Next.js, Supabase, Redis, and Resend on free tiers](https://suryansh.work/blog/free-build-log-blog-nextjs-portfolio) — <sub>Jul 22, 2026</sub><br>- [How we&#39;re architecting a financial AI analyst: a multi-agent research desk on LangGraph](https://suryansh.work/blog/how-we-architect-a-financial-ai-analyst-multi-agent) — <sub>Jul 16, 2026</sub><br><!-- BLOG-POST-LIST:END -->
 
 → [All posts at suryansh.work/blog](https://suryansh.work/blog)
 
