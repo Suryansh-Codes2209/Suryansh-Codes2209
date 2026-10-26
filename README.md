@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://suryansh.work">suryansh.work</a> ·
   <a href="https://suryansh.work/blog">Build logs</a> ·
-  <a href="https://x.com/Suryansh_2001">X</a> ·
+  <a href="https://x.com/suryanshbuilds">X</a> ·
   <a href="https://www.linkedin.com/in/suryansh-chaudhary-2209/">LinkedIn</a> ·
   <a href="https://suryansh.work/suryansh.pdf">Résumé</a>
 </p>
