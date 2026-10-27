@@ -19,11 +19,7 @@
 
 ### Fresh from the build log
 
-<!-- BLOG-POST-LIST:START -->
-- [Signal Boy: a zero-dependency WiFi survey tool you run with npx](https://suryansh.work/blog/signal-boy-npx-wifi-survey-tool-zero-dependencies) — <sub>Aug 7, 2026</sub>
-- [MCP servers vs agent skills: the payload is the integration](https://suryansh.work/blog/mcp-servers-vs-agent-skills-tool-payload-design) — <sub>Aug 3, 2026</sub>
-- [MacGet 1.3.0: BitTorrent, book catalogs, and deleting my own adaptive concurrency](https://suryansh.work/blog/macget-1-3-0-bittorrent-book-catalogs-adaptive-concurrency) — <sub>Jul 30, 2026</sub>
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [Signal Boy: a zero-dependency WiFi survey tool you run with npx](https://suryansh.work/blog/signal-boy-npx-wifi-survey-tool-zero-dependencies) — <sub>Aug 7, 2026</sub><br>- [MCP servers vs agent skills: the payload is the integration](https://suryansh.work/blog/mcp-servers-vs-agent-skills-tool-payload-design) — <sub>Aug 3, 2026</sub><br>- [MacGet 1.3.0: BitTorrent, book catalogs, and deleting my own adaptive concurrency](https://suryansh.work/blog/macget-1-3-0-bittorrent-book-catalogs-adaptive-concurrency) — <sub>Jul 30, 2026</sub><br>- [Automating blog cover art with Gemini 3 Pro Image: my &#39;no legible text&#39; rule was the bug](https://suryansh.work/blog/automating-blog-cover-art-gemini-3-pro-image) — <sub>Jul 26, 2026</sub><br><!-- BLOG-POST-LIST:END -->
 
 ### Works with
 
